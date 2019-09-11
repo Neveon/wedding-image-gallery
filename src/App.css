@@ -44,8 +44,7 @@ html {
 }
 .homeContainer {
   position: relative;
-  background: url('https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fd2v9y0dukr6mq2.cloudfront.net%2Fvideo%2Fthumbnail%2FGTYSdDW%2Fblue-flowers-abstract-wedding-background-02_btkoubuq__F0000.png&f=1')
-    no-repeat center;
+  background: url('./images/background.png') no-repeat center;
   height: 100vh;
   border: 5px solid white;
 }
