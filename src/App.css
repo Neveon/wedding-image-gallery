@@ -1,0 +1,86 @@
+html {
+  padding: 0;
+  margin: 0;
+}
+.App {
+  text-align: center;
+  margin: auto;
+}
+.App p {
+  font-family: Lora;
+}
+#toast-container {
+  bottom: auto !important;
+}
+.App img {
+  display: block;
+  max-width: 80vw;
+  /* max-height: 450px; */
+  margin: 20px auto;
+}
+#weddingPhotoHome {
+  display: inline;
+  max-width: 400px;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+#weddingPhotoHome2 {
+  display: inline;
+  max-width: 400px;
+}
+.title {
+  margin-top: 0;
+  padding-top: 25px;
+  font-size: 30px;
+  font-weight: 500;
+  font-family: Raleway;
+}
+.theButtons {
+  position: absolute !important;
+  top: 40%;
+  transform: translateY(-40%);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.homeContainer {
+  position: relative;
+  background: url('https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fd2v9y0dukr6mq2.cloudfront.net%2Fvideo%2Fthumbnail%2FGTYSdDW%2Fblue-flowers-abstract-wedding-background-02_btkoubuq__F0000.png&f=1')
+    no-repeat center;
+  height: 100vh;
+  border: 5px solid white;
+}
+.photoContainer {
+  background-color: #d9dbf0;
+}
+
+.input-field {
+  max-width: 200px;
+  margin: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    overflow: auto;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .App img {
+    display: block;
+    max-width: 80vw;
+    margin: 20 auto;
+  }
+
+  #weddingPhotoHome2 {
+    display: inline;
+    max-width: 300px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .title {
+    font-size: 22px;
+  }
+}
