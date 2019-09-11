@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "wedding-sept"
+  },
+  "targets": {
+    "wedding-sept": {
+      "hosting": {
+        "john2019cynthia": [
+          "john2019cynthia"
+        ]
+      }
+    }
+  }
+}

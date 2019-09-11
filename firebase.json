@@ -1,0 +1,7 @@
+{
+  "hosting": {
+    "target": "john2019cynthia",
+    "public": "build",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  }
+}
