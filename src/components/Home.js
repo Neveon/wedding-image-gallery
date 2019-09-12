@@ -44,9 +44,6 @@ class Home extends Component {
           <h1 className='title'>
             Cynthia Corrochano and John Bianchi
             <br />
-            Wedding
-            <br />
-            <br />
             September 12, 2019
           </h1>
 
