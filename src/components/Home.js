@@ -3,7 +3,6 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 // Home pic
-import weddingPhoto from '../images/weddingHomePhoto.jpg';
 import weddingPhoto2 from '../images/weddingHomePhoto2.jpg';
 
 // Material-UI
@@ -45,6 +44,9 @@ class Home extends Component {
           <h1 className='title'>
             Cynthia Corrochano and John Bianchi
             <br />
+            Wedding
+            <br />
+            <br />
             September 12, 2019
           </h1>
 
@@ -58,30 +60,20 @@ class Home extends Component {
             <br />
             <br />
 
-            <img
-              src={weddingPhoto}
-              style={{ width: '100%' }}
-              alt='weddingPhotoHome'
-              id='weddingPhotoHome'
-            />
+            <Button
+              variant='contained'
+              color='primary'
+              onClick={this.handleEdit}
+            >
+              Upload Images&nbsp;
+              <CloudUploadIcon />
+            </Button>
           </div>
         </div>
 
         <div className='col s12 m6'>
           <div className='row homeContainer'>
             <div className='theButtons'>
-              <Button
-                variant='contained'
-                color='primary'
-                onClick={this.handleEdit}
-                className='pulse'
-              >
-                Upload Images&nbsp;
-                <CloudUploadIcon />
-              </Button>
-              <br />
-              <br />
-              <br />
               <br />
               Password Protected Images
               <br />
@@ -93,7 +85,7 @@ class Home extends Component {
                 hidden='hidden'
               />
               <Link to='/images' style={{ textDecoration: 'none' }}>
-                <Button variant='contained' color='secondary'>
+                <Button variant='contained' color='secondary' className='pulse'>
                   See images
                 </Button>
               </Link>
