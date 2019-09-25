@@ -15,8 +15,7 @@ import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 
 const theme = createMuiTheme(themeFile);
 
-axios.defaults.baseURL =
-  'https://us-central1-wedding-sept.cloudfunctions.net/api';
+axios.defaults.baseURL = 'FIREBASE_API_HERE';
 
 function App() {
   useEffect(() => {

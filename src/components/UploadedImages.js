@@ -32,7 +32,7 @@ function UploadedImages() {
   const handleSubmit = e => {
     e.preventDefault();
 
-    if (textInput === 'Love') {
+    if (textInput === '***PASSWORD_HERE***') {
       M.toast({ html: 'Loading Images...' });
       axios
         .get('/images')

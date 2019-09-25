@@ -42,7 +42,7 @@ class Home extends Component {
       <div className='row photoContainer'>
         <div className='col s12 m6'>
           <h1 className='title'>
-            Cynthia Corrochano and John Bianchi
+            Cynthia and John
             <br />
             September 12, 2019
           </h1>
