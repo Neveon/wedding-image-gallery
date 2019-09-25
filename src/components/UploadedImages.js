@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import Gallery from 'react-photo-gallery';
+import Carousel, { Modal, ModalGateway } from 'react-images';
 import axios from 'axios';
 import Button from '@material-ui/core/Button';
 
@@ -10,7 +11,19 @@ import M from 'materialize-css/dist/js/materialize.min.js';
 function UploadedImages() {
   const [list, setList] = useState([]);
   const [textInput, setTextInput] = useState('');
+  const [currentImage, setCurrentImage] = useState(0);
+  const [viewerIsOpen, setViewerIsOpen] = useState(false);
   const allPhotos = [];
+
+  const openLightBox = useCallback((event, { photo, index }) => {
+    setCurrentImage(index);
+    setViewerIsOpen(true);
+  }, []);
+
+  const closeLightbox = () => {
+    setCurrentImage(0);
+    setViewerIsOpen(false);
+  };
 
   const onChange = e => {
     setTextInput(e.target.value);
@@ -36,10 +49,6 @@ function UploadedImages() {
     }
   };
 
-  const onClick = (e, obj) => {
-    window.open(obj.photo.src, '_blank');
-  };
-
   if (list.length > 0 && allPhotos.length === 0) {
     for (let x = 0; x < list.length; x++) {
       allPhotos.push({
@@ -52,7 +61,20 @@ function UploadedImages() {
 
   return allPhotos.length ? (
     <div>
-      <Gallery photos={allPhotos} direction={'column'} onClick={onClick} />
+      <Gallery photos={allPhotos} direction={'column'} onClick={openLightBox} />
+      <ModalGateway>
+        {viewerIsOpen ? (
+          <Modal onClose={closeLightbox}>
+            <Carousel
+              currentIndex={currentImage}
+              views={allPhotos.map(x => ({
+                ...x,
+                srcset: x.srcSet
+              }))}
+            />
+          </Modal>
+        ) : null}
+      </ModalGateway>
     </div>
   ) : (
     <div>
